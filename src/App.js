@@ -1,10 +1,15 @@
-import NavBar from "./Component/js/NavBar";
 
+
+import './App.css';
+import Signup from './pages/signup/signup';
+import NavBar from "./Component/js/NavBar";
 
 function App() {
   return (
-    <NavBar></NavBar>
-  );
+    <>
+     <Signup></Signup>
+     <NavBar></NavBar>
+    </>
 }
 
 export default App;
