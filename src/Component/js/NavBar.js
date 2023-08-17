@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUsers, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
-import './style.css';
+import '../css/style.css';
 
 function NavBar() {
   return (
