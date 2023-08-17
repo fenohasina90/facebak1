@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1877f2;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .nav-links a {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
