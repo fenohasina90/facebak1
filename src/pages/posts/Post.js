@@ -1,11 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons'; 
+import "./Post.css";
 
 function Post({ id, title, content }) {
     return (
-        <div>
-            <p>{id}</p>
-            <p>{title}</p>
-            <p>{content}</p>
+        <div className="container">
+            <p className="title">{title}</p>
+            <p className="content">{content}</p>
+            <br></br>
+
+            <hr></hr>
+            <p className="count"><FontAwesomeIcon className="iconeCount" icon={faThumbsUp}/> 12K</p>
+            <hr></hr>
+            <div className="reaction">
+                <p className="icons"><FontAwesomeIcon className="icone" icon={faThumbsUp}/> <span>J'aime</span> </p>
+                <p className="icons"><FontAwesomeIcon className="icone" icon={faComment} /> <span>Commenter</span></p>
+            </div>
+            <hr></hr>
         </div>
     );
 }
