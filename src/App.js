@@ -7,22 +7,23 @@ import Main from "./Component/js/Main";
 function App() {
   return (
     <BrowserRouter>
-    <div>
-      <NavBar />
-      <Main />
-    </div>
-    <Routes>
-      <Route path="/" element={<Signup />} />
-      <Route path="/home" element={<NavBar />} />
-      <Route path="/home"
-       element={ 
-       <div>
-          <NavBar />
-          <Main />
+      <div>
+        <NavBar />
+        <Main />
       </div>
-      } />
-    </Routes>
-  </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route
+          path="/home"
+          element={
+            <div>
+              <NavBar />
+              <Main />
+            </div>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
