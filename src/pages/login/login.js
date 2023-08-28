@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./login.css";
 
-
 function Login() {
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -12,7 +11,7 @@ function Login() {
     const password = event.target.password.value;
 
     if (!email || !password) {
-      setErrorMessage("Veuillez remplir tous les champs obligatoires.");
+      setErrorMessage("Please fill in all the required fields.");
       return;
     }
     setErrorMessage("");
@@ -23,7 +22,7 @@ function Login() {
     };
     try {
       const response = await fetch("http://127.0.0.1:8080/users", {
-        method: "PUT", 
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
@@ -31,13 +30,13 @@ function Login() {
       });
 
       if (response.ok) {
-        alert("Connecté avec succès !");
-        const url = "http://localhost:3000/home"
+        alert("Logged in successfully!");
+        const url = "http://localhost:3000/home";
         window.location.href = url;
-       } else {
+      } else {
         const errorData = await response.json();
-        console.error("Erreur lors de la connexion:", errorData);
-        throw new Error("Erreur lors de la connexion");
+        console.error("Error logging in:", errorData);
+        throw new Error("Error logging in");
       }
     } catch (error) {
       console.error(error);
@@ -50,7 +49,7 @@ function Login() {
         <div className="loginLeft">
           <h3 className="loginLogo">Facebak</h3>
           <span className="loginDesc">
-            Connectez-vous avec vos informations d'identification.
+            Log in with your credentials.
           </span>
         </div>
         <div className="loginRight">
@@ -58,8 +57,8 @@ function Login() {
             <form onSubmit={handleSubmit}>
               <input placeholder="Email" name="email" className="loginInput" />
               <input placeholder="Password" name="password" type="password" className="loginInput" />
-              <button type="submit" className="loginButton">Connexion</button>
-              <button className="loginRegisterButton">Créer un compte</button>
+              <button type="submit" className="loginButton">Log In</button>
+              <button className="loginRegisterButton">Create an Account</button>
             </form>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
