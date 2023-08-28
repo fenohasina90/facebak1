@@ -14,8 +14,8 @@ function Post({ id, title, content }) {
             <p className="count"><FontAwesomeIcon className="iconeCount" icon={faThumbsUp}/> 12K</p>
             <hr></hr>
             <div className="reaction">
-                <p className="icons"><FontAwesomeIcon className="icone" icon={faThumbsUp}/> <span>J'aime</span> </p>
-                <p className="icons"><FontAwesomeIcon className="icone" icon={faComment} /> <span>Commenter</span></p>
+                <p className="icons"><FontAwesomeIcon className="icone" icon={faThumbsUp}/> <span className="span">Like</span> </p>
+                <p className="icons"><FontAwesomeIcon className="icone" icon={faComment} /> <span className="span">Comment</span></p>
             </div>
             <hr></hr>
         </div>
