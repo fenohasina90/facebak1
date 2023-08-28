@@ -13,7 +13,7 @@ export default function Signup() {
 
       
         if (!email || !password || !confirmPassword|| !username) {   
-            setErrorMessage("Veuillez remplir tous les champs obligatoires.");
+            setErrorMessage("Please fill in all forms.");
             return; 
           }
         setErrorMessage("") ;
@@ -37,35 +37,38 @@ export default function Signup() {
             alert("Inserted successfully");
           } else {
             const errorData = await response.json(); // Convert response body to JSON
-            console.error("Erreur lors de l'insertion:", errorData);
-            throw new Error("Erreur lors de l'insertion");
+            console.error("Error during insertion:", errorData);
+            throw new Error("Error during insertion");
           }
         } catch (error) {
           console.error(error);
         }
       };
-      
+
+    const Signing = async() => {
+      const link = "http://localhost:3000/login";
+      window.location.href = link;
+    }
     return (
         <div className="login">
           <div className="loginWrapper">
             <div className="loginLeft">
               <h3 className="loginLogo">Facebak</h3>
               <span className="loginDesc">
-                Connect with friends and the world around you on Lamasocial.
+              Dive into a world of possibilities and discover new horizons as you connect with your loved ones and the vast world around you.
               </span>
             </div>
             <div className="loginRight">
               <div className="loginBox">
-                <input placeholder="Email *" id="email" className="loginInput" />
-                <input placeholder="Password * " id="password" className="loginInput" />
-                <input placeholder="Confirm Password* " id="confirmPassword" className="loginInput" />
-                <input placeholder="Username * " id="username" className="loginInput" />
+                <input placeholder="Email " id="email" className="loginInput" />
+                <input type="password" placeholder="Password  " id="password" className="loginInput" />
+                <input type="password"  placeholder="Confirm Password " id="confirmPassword" className="loginInput" />
+                <input placeholder="Username  " id="username" className="loginInput" />
                 <button className="loginButton" id="submitSignUp" onClick={handleSubmit}>Sign Up</button>
-                <button className="loginRegisterButton">
+                <button className="loginRegisterButton" onClick={Signing}>
                   Log into Account
                 </button>
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
-    
               </div>
             </div>
           </div>
