@@ -44,6 +44,11 @@ function Login() {
     }
   };
 
+  const createAccount = async() =>{
+    const link = "http://localhost:3000";
+    window.location.href = link;
+  }
+
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -59,7 +64,7 @@ function Login() {
               <input placeholder="Email" name="email" className="loginInput" />
               <input placeholder="Password" name="password" type="password" className="loginInput" />
               <button type="submit" className="loginButton">Connexion</button>
-              <button className="loginRegisterButton">Créer un compte</button>
+              <button className="loginRegisterButton" onClick={createAccount}>Créer un compte</button>
             </form>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
