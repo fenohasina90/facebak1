@@ -11,12 +11,12 @@ function NavBar() {
             <p className="logo">Facebak</p>
 
             <div className="search-bar">
-              <input type="text" placeholder="Rechercher..." />
+              <input type="text" placeholder="Search ..." />
             </div>
 
             <ul>
-                <li><FontAwesomeIcon icon={faHome} /> ACCUEIL</li>
-                <li><FontAwesomeIcon icon={faUsers} /> AMIS</li>
+                <li><FontAwesomeIcon icon={faHome} /> HOME</li>
+                <li><FontAwesomeIcon icon={faUsers} /> FRIENDS</li>
                 <li><FontAwesomeIcon icon={faBell} /> NOTIFICATIONS</li>
             </ul>
             
