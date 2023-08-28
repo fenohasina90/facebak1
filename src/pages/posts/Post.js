@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from "react";
 
+function Post({ id, title, content }) {
+    return (
+        <div>
+            <p>{id}</p>
+            <p>{title}</p>
+            <p>{content}</p>
+        </div>
+    );
+}
+
 export default function GetPost() {
     const [postData, setPostData] = useState([]);
 
     useEffect(() => {
-        ListPost(setPostData); // Passer setPostData en argument
+        ListPost(setPostData);
     }, []);
 
     return (
-        <div>
+        <div className="DataGet">
             {postData.map((value) => (
-                <div key={value.id}>
-                    <p>{value.id}</p>
-                    <p>{value.title}</p>
-                    <p>{value.content}</p>
-                </div>
+                <Post key={value.id} id={value.id} title={value.title} content={value.content} />
             ))}
         </div>
     );
