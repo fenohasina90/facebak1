@@ -5,23 +5,25 @@ import '../css/style.css';
 
 function NavBar() {
   return (
-    <nav className="navbar">
-      <div className="logo">   
+    
+    <div className="navbar">
+        <div className="position">
+            <p className="logo">Facebak</p>
 
-        Facebak
-      </div>
-      <div className="search-bar">
-        <input type="text" placeholder="Rechercher..." />
-      </div>
-      <div className="nav-links">
-        <a href="#"><FontAwesomeIcon icon={faHome} /> Accueil</a>
-        <a href="#"><FontAwesomeIcon icon={faUsers} /> Amis</a>
-        <a href="#"><FontAwesomeIcon icon={faBell} /> Notifications</a>
-      </div>
-      <div className="profile">
-        <FontAwesomeIcon icon={faUser} />
-      </div>
-    </nav>
+            <div className="search-bar">
+              <input type="text" placeholder="Rechercher..." />
+            </div>
+
+            <ul>
+                <li><FontAwesomeIcon icon={faHome} /> ACCUEIL</li>
+                <li><FontAwesomeIcon icon={faUsers} /> AMIS</li>
+                <li><FontAwesomeIcon icon={faBell} /> NOTIFICATIONS</li>
+            </ul>
+            
+            <p className="profile"><FontAwesomeIcon icon={faUser}/></p>
+        </div>
+    </div>
+    
   );
 }
 
