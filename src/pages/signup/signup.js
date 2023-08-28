@@ -23,23 +23,25 @@ export default function Signup() {
           confirmPassword,
           username,
         };
-        fetch(' http://127.0.0.1:8080/users',{
-          method : "POST",
-          headers : {
-              "Content-Type":"application/json",
-          },
-          body: JSON.stringify(userData),
-        })
-        .then((response) => {
-        if (response.ok) {
-          alert('Inserted successfully')
-        } else {
-          throw new Error("Erreur lors de l'insertion");
+        try {
+          const response = await fetch("http://127.0.0.1:8080/users", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userData),
+          });
+    
+          if (response.ok) {
+            alert("Inserted successfully");
+          } else {
+            const errorData = await response.json(); // Convert response body to JSON
+            console.error("Erreur lors de l'insertion:", errorData);
+            throw new Error("Erreur lors de l'insertion");
+          }
+        } catch (error) {
+          console.error(error);
         }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
       };
       
     return (
