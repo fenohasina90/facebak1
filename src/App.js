@@ -7,7 +7,7 @@ import Post from "./pages/posts/Post"
 
 function App() {
   return (
-    <BrowserRouter>
+   <BrowserRouter>
       <Routes>
         <Route path="/" element={<Signup />} />
         <Route path="/home" element={ <div>
@@ -16,8 +16,7 @@ function App() {
         <Post/>
       </div>} />
       </Routes>
-    </BrowserRouter>
-  );
+    </BrowserRouter>);
 }
 
 export default App;
