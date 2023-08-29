@@ -8,16 +8,17 @@ function NavBar() {
     
     <div className="navbar">
         <div className="position">
-            <p className="logo">Facebak</p>
+            <a href='http://localhost:3000/home'><p className="logo">Facebak</p></a>
+            
 
             <div className="search-bar">
               <input type="text" placeholder="Search ..." />
             </div>
 
             <ul>
-                <li><FontAwesomeIcon icon={faHome} /> HOME</li>
-                <li><FontAwesomeIcon icon={faUsers} /> FRIENDS</li>
-                <li><FontAwesomeIcon icon={faBell} /> NOTIFICATIONS</li>
+                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faHome} />   HOME</a></li>
+                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faUsers} />  FRIEND</a></li>
+                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faBell} />   NOTIFICATIONS</a></li>
             </ul>
             
             <p className="profile"><FontAwesomeIcon icon={faUser}/></p>
