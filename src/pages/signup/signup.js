@@ -34,7 +34,9 @@ export default function Signup() {
           });
     
           if (response.ok) {
+            const url = 'http://localhost:3000/login';
             alert("Inserted successfully");
+            window.location.href = url;
           } else {
             const errorData = await response.json(); // Convert response body to JSON
             console.error("Error during insertion:", errorData);
