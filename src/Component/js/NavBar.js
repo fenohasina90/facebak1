@@ -16,12 +16,11 @@ function NavBar() {
             </div>
 
             <ul>
-                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faHome} />   HOME</a></li>
-                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faUsers} />  FRIEND</a></li>
-                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faBell} />   NOTIFICATIONS</a></li>
-            </ul>
-            
-            <p className="profile"><FontAwesomeIcon icon={faUser}/></p>
+                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faHome} /></a></li>
+                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faUsers} /></a></li>
+                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faBell} /></a></li>
+                <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faUser} /></a></li>
+            </ul> 
         </div>
     </div>
     

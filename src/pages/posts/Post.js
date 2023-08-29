@@ -25,7 +25,7 @@ function Post({ id, title, content }) {
 
             <hr />
             <p className="count">
-                <FontAwesomeIcon className="iconeCount" icon={faThumbsUp}/> {likes} {likes === 1 ? 'personne aime' : 'personnes aiment'}
+                <FontAwesomeIcon className="iconeCount" icon={faThumbsUp}/> {likes} {likes === 1 ? 'liked' : 'like'}
             </p>
             <hr />
             <div className="reaction">
