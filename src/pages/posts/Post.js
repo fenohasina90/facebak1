@@ -4,20 +4,39 @@ import { faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons';
 import "./Post.css";
 
 function Post({ id, title, content }) {
+    const [likes, setLikes] = useState(0);
+    const [userLiked, setUserLiked] = useState(false);
+
+    const handleLikeClick = () => {
+        if (!userLiked) {
+            setLikes(likes + 1);
+            setUserLiked(true);
+        } else {
+            setLikes(likes - 1);
+            setUserLiked(false);
+        }
+    };
+
     return (
         <div className="container">
             <p className="title">{title}</p>
             <p className="content">{content}</p>
-            <br></br>
+            <br />
 
-            <hr></hr>
-            <p className="count"><FontAwesomeIcon className="iconeCount" icon={faThumbsUp}/> 12K</p>
-            <hr></hr>
+            <hr />
+            <p className="count">
+                <FontAwesomeIcon className="iconeCount" icon={faThumbsUp}/> {likes} {likes === 1 ? 'personne aime' : 'personnes aiment'}
+            </p>
+            <hr />
             <div className="reaction">
-                <p className="icons"><FontAwesomeIcon className="icone" icon={faThumbsUp}/> <span>J'aime</span> </p>
+                <button  className={`icons ${userLiked ? 'liked' : ''}`} onClick={handleLikeClick}
+                          style={{ border: "none", background: "none", cursor: "pointer" }}
+                          >
+                    <FontAwesomeIcon className="icone" icon={faThumbsUp}/> <span>J'aime</span>
+                </button>
                 <p className="icons"><FontAwesomeIcon className="icone" icon={faComment} /> <span>Commenter</span></p>
             </div>
-            <hr></hr>
+            <hr />
         </div>
     );
 }
