@@ -26,10 +26,12 @@
     font-weight: 800;
     color: #1775ee;
     margin-bottom: 10px;
+    font-family: cursive;
   }
   
   .loginDesc {
     font-size: 24px;
+    font-family: cursive;
   }
   
   .loginBox{

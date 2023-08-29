@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUsers, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUsers, faBell, faUser, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import '../css/style.css';
 
 function NavBar() {
@@ -20,6 +20,7 @@ function NavBar() {
                 <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faUsers} /></a></li>
                 <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faBell} /></a></li>
                 <li><a href='http://localhost:3000/home'><FontAwesomeIcon icon={faUser} /></a></li>
+                <li><a href='http://localhost:3000'><FontAwesomeIcon icon={faPowerOff} /></a></li>
             </ul> 
         </div>
     </div>

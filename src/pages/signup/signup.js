@@ -35,7 +35,7 @@ export default function Signup() {
     
           if (response.ok) {
             const url = 'http://localhost:3000/login';
-            alert("Inserted successfully");
+            alert("successfully");
             window.location.href = url;
           } else {
             const errorData = await response.json(); // Convert response body to JSON

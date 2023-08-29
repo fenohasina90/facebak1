@@ -7,7 +7,7 @@ function Left() {
 
             <div className="img">
                 <img src="image/323451973_732365921619161_3564231273178315562_n.jpg" alt="Profile" />
-                <p>John Deo</p>
+                <p>Koto Kely</p>
             </div>
 
             <div className="img">
