@@ -44,11 +44,11 @@
     color: rgb(0, 110, 255);
 }
 
-span{
+.span{
     color: gray;
 }
 
-span:hover{
+.span:hover{
     color: rgb(0, 110, 255);
 }
 

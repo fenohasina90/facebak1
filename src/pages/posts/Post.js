@@ -32,9 +32,9 @@ function Post({ id, title, content }) {
                 <button  className={`icons ${userLiked ? 'liked' : ''}`} onClick={handleLikeClick}
                           style={{ border: "none", background: "none", cursor: "pointer" }}
                           >
-                    <FontAwesomeIcon className="icone" icon={faThumbsUp}/> <span>J'aime</span>
+                    <FontAwesomeIcon className="icone" icon={faThumbsUp}/> <span className="span">Like</span>
                 </button>
-                <p className="icons"><FontAwesomeIcon className="icone" icon={faComment} /> <span>Commenter</span></p>
+                <p className="icons"><FontAwesomeIcon className="icone" icon={faComment} /> <span className="span">Comment</span></p>
             </div>
             <hr />
         </div>
